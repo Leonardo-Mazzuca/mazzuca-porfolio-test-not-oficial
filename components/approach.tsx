@@ -15,7 +15,7 @@ export default function Approach() {
             My <span className="text-purple">Approach</span>
         </h1>   
 
-      <div className="pm-20 flex flex-col lg:flex-row items-center justify-cente gap-4">
+      <div className="py-20 flex flex-col lg:flex-row items-center justify-cente gap-4">
         <Card 
         title="Planning & Strategy"
         icon={<AceternityIcon

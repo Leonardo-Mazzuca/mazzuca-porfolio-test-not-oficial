@@ -7,6 +7,7 @@ import { useState } from "react";
 import animationData from '@/data/confetti.json'
 import MagicButton from "./margic-button";
 import { IoCopyOutline } from "react-icons/io5";
+import { useTheme } from "next-themes";
 
 export const BentoGrid = ({
   className,
@@ -53,6 +54,7 @@ export const BentoGridItem = ({
 
     const [copied, setCopied] = useState(false)
 
+    const {theme} = useTheme();
     const handleCopy = () => {
         navigator.clipboard.writeText('mazzuca2110@gmail.com')
 
@@ -71,8 +73,8 @@ export const BentoGridItem = ({
       )}
      style={{
         background: "rgb(4,7,29)",
-        backgroundColor:
-          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+        backgroundColor: 
+          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)" ,
       }}
     >
 
@@ -111,10 +113,10 @@ export const BentoGridItem = ({
 
             <div className={cn(titleClassName,"group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10")}>
 
-                <div className="font-sans font-extralight text-[#c1c2d3]  text-sm md:text-xs lg:text-base z-10">
+                <div className={`font-sans font-extralight text-[#c1c2d3]  text-sm md:text-xs lg:text-base z-10`}>
                     {description}
                 </div>
-                <div className="font-sans text-lg font-bold  dark:text-neutral-200 lg:text-3xl max-w-96 z-10">
+                <div className={`font-sans text-lg font-bold text-neutral-200 lg:text-3xl max-w-96 z-10 `}>
                     {title}
                 </div>
 
@@ -134,20 +136,20 @@ export const BentoGridItem = ({
                   <span
                     key={i}
                     className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    lg:opacity-100 rounded-lg text-center text-white dark:bg-[#10132E]"
                   >
                     {item}
                   </span>
                 ))}
-                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center dark:bg-[#10132E]"></span>
               </div>
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
-                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center dark:bg-[#10132E]"></span>
                 {rightLists.map((item, i) => (
                   <span
                     key={i}
                     className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    lg:opacity-100 rounded-lg text-center text-white-100 dark:bg-[#10132E]"
                   >
                     {item}
                   </span>

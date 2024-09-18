@@ -2,15 +2,19 @@ import { FaLocationArrow } from "react-icons/fa"
 import MagicButton from "./ui/margic-button"
 import { Spotlight } from "./ui/spotlight"
 import { TextGenerateEffect } from "./ui/text-generate-effect"
-
-
+import { useTheme } from "next-themes"
+import { ModeToggle } from "./ui/toggle-button"
 
 
 const Hero = () => {
 
+
+
   return (
 
     <div className="pb-20 pt-36">
+
+
         <div>
             <Spotlight className="-top-40 -left-10 md:-left-32 -md:-top-20 h-screen" fill="white" />
             <Spotlight className="-top-10 left-full h-[80vh] w-[50vw]" fill="purple" />
@@ -26,9 +30,10 @@ const Hero = () => {
 
         <div className="flex justify-center relative my-20 z-10">
           <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-            <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
+            <h2 className="dark:text-blue-100 uppercase tracking-widest text-xs text-center max-w-80">
               Dynamic web magic with Next.js
             </h2>
+           
 
             <TextGenerateEffect
               className="text-center text-[40px] text-5xl lg:text-6xl"
@@ -46,6 +51,7 @@ const Hero = () => {
               />
             </a>
 
+          
           </div>
         </div>
     </div>
